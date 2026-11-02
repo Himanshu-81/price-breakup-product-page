@@ -1,0 +1,94 @@
+/* ── Core Reset & Design Variables ───────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Warm Parchment Luxury Palette */
+  --bg-page:        #F9F8F5;
+  --bg-surface:     #FFFFFF;
+  --bg-subtle:      #F4EFEA;
+  --bg-cream:       #FAF6EF;
+  --bg-dark:        #181614;
+
+  /* Borders & Dividers */
+  --border-light:   #EAE4D9;
+  --border-medium:  #DACFBE;
+  --border-dark:    #2E2A25;
+
+  /* Typography Colors */
+  --text-main:      #1C1A17;
+  --text-secondary: #58534A;
+  --text-muted:     #8C8477;
+  --text-light:     #F4F1EA;
+
+  /* Precious Metals & Accents */
+  --gold-accent:    #9A7330;
+  --gold-rich:      #B38838;
+  --gold-warm:      #E2B755;
+  --gold-tint:      #FDF8EE;
+  --gold-border:    #E2D3B8;
+
+  --emerald-tint:   #EDF5F0;
+  --emerald-text:   #1D5A3A;
+
+  /* Shadows */
+  --shadow-subtle:  0 1px 3px rgba(28, 26, 23, 0.04), 0 4px 14px rgba(28, 26, 23, 0.03);
+  --shadow-card:    0 2px 8px rgba(28, 26, 23, 0.05), 0 12px 28px rgba(28, 26, 23, 0.04);
+  --shadow-hover:   0 4px 12px rgba(28, 26, 23, 0.08), 0 16px 36px rgba(28, 26, 23, 0.06);
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Didot, 'Bodoni MT', 'Cinzel', Georgia, serif;
+  --font-sans:  'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+html {
+  font-size: 15px;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* Custom Scrollbar for desktop */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-page);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
